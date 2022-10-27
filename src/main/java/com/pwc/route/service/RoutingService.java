@@ -1,31 +1,15 @@
 package com.pwc.route.service;
 
-import java.util.List;
-import java.util.Set;
+import java.util.Collection;
 
-import org.springframework.stereotype.Service;
+public interface RoutingService {
 
-@Service
-public class RoutingService {
-
-	// TODO: temp set
-	private final Set<String> countries = Set.of("CZE", "AUT", "ITA");
-
-	public List<String> calculateRoute(String origin, String destination) {
-
-		validateCountry(origin);
-		validateCountry(destination);
-
-		if (origin.equals(destination)) {
-			return List.of(origin);
-		}
-
-		return List.of("CZE", "AUT", "ITA");
-	}
-
-	private void validateCountry(String countryCca3) {
-		if (!countries.contains(countryCca3)) {
-			throw new IllegalArgumentException("No country found with " + countryCca3);
-		}
-	}
+	/**
+	 * This method finds a route between the origin and destination country if exists.
+	 * 
+	 * @param origin
+	 * @param destination
+	 * @return
+	 */
+	public Collection<String> calculateRoute(String origin, String destination);
 }

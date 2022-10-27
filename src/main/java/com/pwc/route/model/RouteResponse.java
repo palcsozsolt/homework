@@ -1,19 +1,19 @@
 package com.pwc.route.model;
 
-import java.util.List;
+import java.util.Collection;
 
 public class RouteResponse {
 
-	private List<String> route;
+	private Collection<String> route;
 
 	public RouteResponse() {
 	}
 
-	public RouteResponse(List<String> route) {
+	public RouteResponse(Collection<String> route) {
 		this.route = route;
 	}
 
-	public List<String> getRoute() {
+	public Collection<String> getRoute() {
 		return route;
 	}
 

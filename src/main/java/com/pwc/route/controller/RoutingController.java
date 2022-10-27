@@ -1,6 +1,6 @@
 package com.pwc.route.controller;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +28,7 @@ public class RoutingController {
 
 		LOG.debug(String.format("Request sent with origin %s, destination %s", origin, destination));
 
-		List<String> calculatedRoute = routingService.calculateRoute(origin, destination);
+		Collection<String> calculatedRoute = routingService.calculateRoute(origin, destination);
 
 		LOG.debug("Returing route response " + calculatedRoute);
 		RouteResponse routeResponse = new RouteResponse(calculatedRoute);
