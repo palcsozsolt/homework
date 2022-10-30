@@ -16,7 +16,7 @@ Example:
 
 ### Starting the application
 
-It requires JRE 11 or later.
+It requires JDK 11 or later.
 Download as zip or clone the project.
 Go to the project folder, 
  - build `mvnw clean install`
